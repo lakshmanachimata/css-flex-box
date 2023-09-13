@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { FlexBaseComponent } from './flex.base/flex.base.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'css-flex-box';
-  cssFelxTypes = ["baseline","flex-start", "flex-end","center","stretch", "space-between","space-around","space-evenly"]
 }
+
