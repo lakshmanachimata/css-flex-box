@@ -1,1 +1,5 @@
-<p>flex.detail works!</p>
+<div class="flex-box">
+  <div class="flex-container" [ngStyle]="getFlexStyle()">
+    <div class="flex-item-one"  *ngFor="let cfType of cssFelxTypes" >{{cfType}}</div>
+  </div>
+</div>
