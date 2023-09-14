@@ -10,10 +10,14 @@ export class FlexBaseComponent {
 
   constructor(private router : Router){}
   title = 'css-flex-box';
-  cssFelxTypes = ["flex-start", "flex-end","center", "space-between","space-around","space-evenly"]
+  cssFelxJCTypes = ["flex-start", "flex-end","center", "space-between","space-around","space-evenly"]
+  cssFelxAITypes = [ "stretch", "flex-start" , "flex-end" , "center" , "space-between","space-around","space-evenly" ,"baseline"]
 
-  gotoDetails(cfType : String) {
-    this.router.navigateByUrl("/flexitype?flexstyle=" + cfType)
+  gotoDetailsJC(cfType : String) {
+    this.router.navigateByUrl("/flexitype?flexstyle=" + cfType + "&type=justify-content")
+  }
+  gotoDetailsAI(cfType : String) {
+    this.router.navigateByUrl("/flexitype?flexstyle=" + cfType+ "&type=align-content")
   }
 }
 

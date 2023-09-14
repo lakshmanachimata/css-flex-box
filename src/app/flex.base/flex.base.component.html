@@ -1,5 +1,10 @@
 <div class="flex-box">
+  <span class="flex-justify-content" >Justify Content</span>
   <div class="flex-container">
-    <div class="flex-item"  *ngFor="let cfType of cssFelxTypes" (click)="gotoDetails(cfType)">{{cfType}}</div>
+    <div class="flex-item"  *ngFor="let cfType of cssFelxJCTypes" (click)="gotoDetailsJC(cfType)">{{cfType}}</div>
   </div>
+  <!-- <span class="flex-align-content">Align Items</span>
+  <div class="flex-container">
+    <div class="flex-item"  *ngFor="let cfType of cssFelxAITypes" (click)="gotoDetailsAI(cfType)">{{cfType}}</div>
+  </div> -->
 </div>

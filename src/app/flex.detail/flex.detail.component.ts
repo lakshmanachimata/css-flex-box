@@ -8,9 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FlexDetailComponent {
 
-  cssFelxStyles = [,"flex-start", "flex-end","center", "space-between","space-around","space-evenly"]
   flexstyle : String = ""
-
+  type : String = ""
   constructor(private route: ActivatedRoute) { }
 
   cssFelxTypes = ["item 1","item 1", "item 3","item 4","item 5"]
@@ -19,13 +18,28 @@ export class FlexDetailComponent {
     this.route.queryParams
       .subscribe(params => {
         this.flexstyle = params['flexstyle'];
+        this.type = params['type'];
       }
     );
   }
 
   getFlexStyle() {
-    return {
-      "justify-content" : this.flexstyle
+    switch(this.type) {
+      case "justify-content":
+        return {
+          "justify-content" : this.flexstyle
+        }
+      case "align-content" :
+        return {
+          "align-content" : this.flexstyle
+        }
+      default : {
+        return {
+          "align-content" : "center",
+          "justify-content" : "center"
+        }
+      }
     }
+
   }
 }
