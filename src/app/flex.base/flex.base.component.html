@@ -1,22 +1,52 @@
-<div>
-<div>
-  <label for="deployment">Deployment Details</label>
-</div>
-<div>
-  <div class="form-group">
-    <label for="status">Status</label>
-    <select class="form-control" name="status">
-       <option [value]="1" >Active</option>
-       <option [value]="0" >In Active</option>
-    </select>
-    <input type="text" placeholder="Search APIs" #filter>
+<div class="conatiner">
+  <div class="banner">
+    <div>Welcome to your developer portal</div>
   </div>
 
-  <mat-grid-list cols="1" rowHeight="20:1">
-    <mat-grid-tile>A1</mat-grid-tile>
-    <mat-grid-tile>A2</mat-grid-tile>
-    <mat-grid-tile>A3</mat-grid-tile>
-    <mat-grid-tile>A4</mat-grid-tile>
-  </mat-grid-list>
-</div>
+  <div>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select class="form-control" name="status">
+        <option [value]="1">Active</option>
+        <option [value]="0">In Active</option>
+      </select>
+      <input type="text" placeholder="Search APIs" #filter />
+    </div>
+  </div>
+
+  <div class="dataContainer">
+    <div class="dataLeft">
+      <label for="deployment">Deployment Details</label>
+    </div>
+
+    <div class="dataRight">
+      <div *ngIf="gridView" class="gridContainer">
+        <div *ngFor="let grid of cardContent" class="cardContainer">
+          <div class="top">
+            <div class="type">{{ grid.type }}</div>
+            <div class="rating">{{ grid.rating }}</div>
+          </div>
+          <div class="bottom">{{ grid.name }}</div>
+        </div>
+      </div>
+
+      <div *ngIf="tableView" class="gridContainer">
+        <div class="tableContainer">
+          <div class="tableHead">
+            <div class="tableContent">Name</div>
+            <div class="tableContent">Type</div>
+            <div class="tableContent">Date Modified</div>
+            <div class="tableContent">Rating</div>
+          </div>
+
+          <div class="tableData" *ngFor="let grid of cardContent">
+            <div class="tableContent">{{ grid.name }}</div>
+            <div class="tableContent">{{ grid.type }}</div>
+            <div class="tableContent">{{ grid.dateModified }}</div>
+            <div class="tableContent">{{ grid.rating }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

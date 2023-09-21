@@ -1,3 +1,88 @@
 mat-grid-tile {
   background: lightblue;
 }
+
+.conatiner {
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+}
+
+.banner {
+  width: 100%;
+  height: 150px;
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dataContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dataLeft {
+  width: 20%;
+}
+.dataRight {
+  width: 80%;
+}
+
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: lightgray;
+}
+.cardContainer {
+  width: calc(25% - 15px);
+  margin: 7.5px;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+  }
+}
+
+.tableContainer {
+  width: 100%;
+  background-color: white;
+
+  .tableHead {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    font-weight: bold;
+    border-bottom: 2px solid grey;
+  }
+  .tableData {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+
+  .tableContent {
+    width: 25%;
+  }
+}
+
+.form-group {
+  padding: 15px 0;
+}
