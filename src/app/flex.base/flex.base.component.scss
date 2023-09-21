@@ -22,9 +22,34 @@ mat-grid-tile {
   display: flex;
   flex-wrap: wrap;
 }
-
 .dataLeft {
   width: 20%;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+.apiListHeader {
+  display: flex; /* or inline-flex */
+  justify-content: flex-start;
+}
+.assets {
+  font-size: 20px;
+  margin-left: 20px;
+  width: 5%;
+}
+
+.apiType {
+  margin: 5px;
+  height: 3em;
+  border-radius: 10px;
+  padding: 5px;
+  width: 5%;
+}
+.apiSearch {
+  margin: 5px;
+  height: 3em;
+  padding: 5px;
+  border-radius: 10px;
+  width: 80%;
 }
 .dataRight {
   width: 80%;
