@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-flex.base',
@@ -13,11 +14,11 @@ export class FlexBaseComponent {
   cssFelxJCTypes = ["flex-start", "flex-end","center", "space-between","space-around","space-evenly"]
   cssFelxAITypes = [ "stretch", "flex-start" , "flex-end" , "center" , "space-between","space-around","space-evenly" ,"baseline"]
 
-  gotoDetailsJC(cfType : String) {
-    this.router.navigateByUrl("/flexitype?flexstyle=" + cfType + "&type=justify-content")
-  }
-  gotoDetailsAI(cfType : String) {
-    this.router.navigateByUrl("/flexitype?flexstyle=" + cfType+ "&type=align-content")
-  }
+  // gotoDetailsJC(cfType : String) {
+  //   this.router.navigateByUrl("/flexitype?flexstyle=" + cfType + "&type=justify-content")
+  // }
+  // gotoDetailsAI(cfType : String) {
+  //   this.router.navigateByUrl("/flexitype?flexstyle=" + cfType+ "&type=align-content")
+  // }
 }
 

@@ -1,10 +1,22 @@
-<div class="flex-box">
-  <span class="flex-justify-content" >Justify Content</span>
-  <div class="flex-container">
-    <div class="flex-item"  *ngFor="let cfType of cssFelxJCTypes" (click)="gotoDetailsJC(cfType)">{{cfType}}</div>
+<div>
+<div>
+  <label for="deployment">Deployment Details</label>
+</div>
+<div>
+  <div class="form-group">
+    <label for="status">Status</label>
+    <select class="form-control" name="status">
+       <option [value]="1" >Active</option>
+       <option [value]="0" >In Active</option>
+    </select>
+    <input type="text" placeholder="Search APIs" #filter>
   </div>
-  <!-- <span class="flex-align-content">Align Items</span>
-  <div class="flex-container">
-    <div class="flex-item"  *ngFor="let cfType of cssFelxAITypes" (click)="gotoDetailsAI(cfType)">{{cfType}}</div>
-  </div> -->
+
+  <mat-grid-list cols="1" rowHeight="20:1">
+    <mat-grid-tile>A1</mat-grid-tile>
+    <mat-grid-tile>A2</mat-grid-tile>
+    <mat-grid-tile>A3</mat-grid-tile>
+    <mat-grid-tile>A4</mat-grid-tile>
+  </mat-grid-list>
+</div>
 </div>

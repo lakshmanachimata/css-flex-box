@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlexDetailComponent } from './flex.detail/flex.detail.component';
 import { FlexBaseComponent } from './flex.base/flex.base.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FlexBaseComponent } from './flex.base/flex.base.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
