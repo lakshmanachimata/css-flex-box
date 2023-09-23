@@ -69,8 +69,8 @@
           <span class="closeIcon" (click)="clearSearch()"><i class="fa-solid fa-xmark"></i></span>
 
           <div class="filterIcons">
-            <span (click)="showGridView(true)" ><i class="fa-solid fa-grip"></i></span>
-            <span (click)="showGridView(false)" ><i class="fa-solid fa-bars"></i></span>
+            <span (click)="showGridView(true)" [ngStyle]="getGICONStyle()" ><i class="fa-solid fa-grip"></i></span>
+            <span (click)="showGridView(false)" [ngStyle]="getTICONStyle()"><i class="tableIcon fa-solid fa-bars"></i></span>
           </div>
         </div>
       </div>

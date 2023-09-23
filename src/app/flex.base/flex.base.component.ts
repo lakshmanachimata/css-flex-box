@@ -146,6 +146,38 @@ export class FlexBaseComponent {
   showGridView(show : boolean) {
     this.showGrid = show
   }
+  getGICONStyle() {
+    if(this.showGrid) {
+      return {
+        'background-color': '#374785',
+        'color': '#fff',
+        'padding' : '2px',
+        'border-radius': '5px'
+      }
+    }else {
+      return {
+        'background-color': 'transparent',
+        'padding' : '2px',
+        'border-radius': '5px'
+      }
+    }
+  }
+  getTICONStyle() {
+    if(!this.showGrid) {
+      return {
+        'background-color': '#374785',
+        'color': '#fff',
+        'padding' : '2px',
+        'border-radius': '5px'
+      }
+    }else {
+      return {
+        'background-color': 'transparent',
+        'padding' : '2px',
+        'border-radius': '5px'
+      }
+    }
+  }
 
   openAPIDetailsDialgue(apiDetails : any) {
     const dialogRef = this.dialog.open(ApiDetailsComponent,{
