@@ -29,55 +29,79 @@ export class FlexBaseComponent {
   ];
 
   showGrid : boolean = true
-
+  searchText : string = ""
   cardContent = [
     {
       id: 1,
       type: "REST API",
-      name: "BoAApie-Agent",
+      name: "GET ITEM REST API",
       dateModified: "Aug 24, 2023",
       rating: 5,
     },
     {
       id: 2,
       type: "REST API",
-      name: "BoAApie-Agent",
+      name: "POST ITEM REST API",
       dateModified: "Aug 24, 2023",
       rating: 5,
     },
     {
       id: 3,
       type: "REST API",
-      name: "BoAApie-Agent",
+      name: "PUT ITEM REST API",
+      dateModified: "Aug 24, 2023",
+      rating: 3,
+    },
+    {
+      id: 1,
+      type: "REST API",
+      name: "GET ITEM REST API",
       dateModified: "Aug 24, 2023",
       rating: 5,
     },
     {
-      id: 4,
+      id: 2,
       type: "REST API",
-      name: "BoAApie-Agent",
+      name: "POST ITEM REST API",
+      dateModified: "Aug 24, 2023",
+      rating: 3,
+    },
+    {
+      id: 3,
+      type: "REST API",
+      name: "PUT ITEM REST API",
       dateModified: "Aug 24, 2023",
       rating: 5,
     },
     {
-      id: 5,
+      id: 1,
       type: "REST API",
-      name: "BoAApie-Agent",
+      name: "GET ITEM REST API",
       dateModified: "Aug 24, 2023",
-      rating: 5,
+      rating: 2,
     },
     {
-      id: 6,
+      id: 2,
       type: "REST API",
-      name: "BoAApie-Agent",
+      name: "POST ITEM REST API",
       dateModified: "Aug 24, 2023",
-      rating: 5,
+      rating: 1,
+    },
+    {
+      id: 3,
+      type: "REST API",
+      name: "PUT ITEM REST API",
+      dateModified: "Aug 24, 2023",
+      rating: 4,
     },
   ];
 
+  cardFilterContent: any= []
 
   constructor(private router: Router,public dialog: MatDialog) {}
-  ngOnInit() { }
+  ngOnInit() {
+    this.cardFilterContent = this.cardContent
+  }
 
 
   // gotoDetailsJC(cfType : String) {
@@ -87,6 +111,16 @@ export class FlexBaseComponent {
   //   this.router.navigateByUrl("/flexitype?flexstyle=" + cfType+ "&type=align-content")
   // }
 
+  clearSearch() {
+    this.searchText = ""
+    this.applyAPIFilter("")
+  }
+
+  applyAPIFilter(input : string) {
+    this.cardFilterContent = this.cardContent.filter(apiData => {
+      return apiData.name.toLowerCase().includes(this.searchText);
+    });
+  }
 
   showGridView(show : boolean) {
     this.showGrid = show

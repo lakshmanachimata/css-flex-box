@@ -128,6 +128,7 @@ mat-grid-tile {
   box-shadow: 2px 2px 3px grey;
   border-radius: 5px 0 0 5px;
   color: var(--primary-color);
+  cursor: pointer;
 }
 .closeIcon {
   border-radius: 0 5px 5px 0;
@@ -158,7 +159,7 @@ mat-grid-tile {
   margin-left: -7.5px;
 }
 .cardContainer {
-  width: calc(25% - 15px);
+  width: calc(30% - 15px);
   margin: 7.5px;
   background-color: white;
   border-radius: 4px;
