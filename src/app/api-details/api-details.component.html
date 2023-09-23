@@ -1,40 +1,40 @@
 
-<mat-dialog-content class="mat-typography">
+<mat-dialog-content class="mat-typography" *ngIf="apiDetailsData">
     <div class="dataLeft">
       <div class="deploymentTable">
         <div class="deploymentHead" for="deployment">Deployment Details</div>
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
-          <div class="deployementRight">sdfasdffdh</div>
+          <div class="deployementLeft">API ID</div>
+          <div class="deployementRight">{{apiDetailsData.id}}</div>
         </div>
 
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
-          <div class="deployementRight">sdfasdffdh</div>
+          <div class="deployementLeft">API Type</div>
+          <div class="deployementRight">{{apiDetailsData.type}}</div>
         </div>
 
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
-          <div class="deployementRight">sdfasdffdh</div>
+          <div class="deployementLeft">API Name</div>
+          <div class="deployementRight">{{apiDetailsData.name}}</div>
         </div>
 
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
-          <div class="deployementRight">sdfasdffdh</div>
+          <div class="deployementLeft">API Modified On</div>
+          <div class="deployementRight">{{apiDetailsData.dateModified}}</div>
         </div>
 
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
-          <div class="deployementRight">sdfasdffdh</div>
+          <div class="deployementLeft">API Rating</div>
+          <div class="deployementRight">{{apiDetailsData.rating}}</div>
         </div>
 
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
+          <div class="deployementLeft">View API JSON</div>
           <div class="deployementRight"><a href="#">VIEW</a></div>
         </div>
 
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
+          <div class="deployementLeft">Download API JSON</div>
           <div class="deployementRight"><a href="#">DOWNLOAD</a></div>
         </div>
       </div>

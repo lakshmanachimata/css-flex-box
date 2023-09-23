@@ -128,7 +128,8 @@ export class FlexBaseComponent {
 
   openAPIDetailsDialgue(apiDetails : any) {
     const dialogRef = this.dialog.open(ApiDetailsComponent,{
-      panelClass: 'api-details-class'
+      panelClass: 'api-details-class',
+      data:apiDetails
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
