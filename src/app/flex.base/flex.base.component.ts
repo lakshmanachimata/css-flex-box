@@ -118,7 +118,7 @@ export class FlexBaseComponent {
 
   applyAPIFilter(input : string) {
     this.cardFilterContent = this.cardContent.filter(apiData => {
-      return apiData.name.toLowerCase().includes(this.searchText);
+      return apiData.name.toLowerCase().includes(this.searchText.toLowerCase());
     });
   }
 
