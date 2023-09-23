@@ -94,6 +94,27 @@ export class FlexBaseComponent {
       dateModified: "Aug 26, 2023",
       rating: 4,
     },
+    {
+      id: 10,
+      type: "REST API",
+      name: "GET ITEM REST API 4",
+      dateModified: "Sept 26, 2023",
+      rating: 2,
+    },
+    {
+      id: 11,
+      type: "REST API",
+      name: "POST ITEM REST API 4",
+      dateModified: "Sept 26, 2023",
+      rating: 1,
+    },
+    {
+      id: 12,
+      type: "REST API",
+      name: "PUT ITEM REST API 4",
+      dateModified: "Sept 26, 2023",
+      rating: 4,
+    },
   ];
 
   cardFilterContent: any= []
