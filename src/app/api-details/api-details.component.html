@@ -32,7 +32,10 @@
           <div class="deployementLeft">View API JSON</div>
           <div class="viewAPI" (click)="viewAPIJSON()">VIEW</div>
         </div>
-
+        <div class="deployementRow" *ngIf="viewJSON">
+          <div class="deployementLeft">API JSON</div>
+          <div class="downloadAPI"  >{{apiDetailsString}}</div>
+        </div>
         <div class="deployementRow" >
           <div class="deployementLeft">Download API JSON</div>
           <div class="downloadAPI" (click)="downloadAPIJSON()" >DOWNLOAD</div>
