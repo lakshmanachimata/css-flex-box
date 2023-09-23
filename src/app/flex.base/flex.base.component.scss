@@ -168,6 +168,7 @@ mat-grid-tile {
   background-color: #374785;
   color: #a8d0e6;
   box-shadow: 2px 2px 3px grey;
+  cursor: pointer;
 
   .top {
     width: 100%;
@@ -219,6 +220,7 @@ mat-grid-tile {
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
+    cursor: pointer;
   }
 
   .tableContent {

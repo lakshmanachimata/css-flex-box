@@ -1,15 +1,14 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
-import { MatGridListModule } from "@angular/material/grid-list";
-
+import {MatDialog} from '@angular/material/dialog';
+import {ApiDetailsComponent} from '../api-details/api-details.component'
 @Component({
   selector: "app-flex.base",
   templateUrl: "./flex.base.component.html",
   styleUrls: ["./flex.base.component.scss"],
 })
 export class FlexBaseComponent {
-  constructor(private router: Router) {}
-  title = "css-flex-box";
+  title = "API Listing App";
   cssFelxJCTypes = [
     "flex-start",
     "flex-end",
@@ -29,15 +28,7 @@ export class FlexBaseComponent {
     "baseline",
   ];
 
-  // gotoDetailsJC(cfType : String) {
-  //   this.router.navigateByUrl("/flexitype?flexstyle=" + cfType + "&type=justify-content")
-  // }
-  // gotoDetailsAI(cfType : String) {
-  //   this.router.navigateByUrl("/flexitype?flexstyle=" + cfType+ "&type=align-content")
-  // }
-
-  gridView = false;
-  tableView = true;
+  showGrid : boolean = true
 
   cardContent = [
     {
@@ -83,4 +74,30 @@ export class FlexBaseComponent {
       rating: 5,
     },
   ];
+
+
+  constructor(private router: Router,public dialog: MatDialog) {}
+  ngOnInit() { }
+
+
+  // gotoDetailsJC(cfType : String) {
+  //   this.router.navigateByUrl("/flexitype?flexstyle=" + cfType + "&type=justify-content")
+  // }
+  // gotoDetailsAI(cfType : String) {
+  //   this.router.navigateByUrl("/flexitype?flexstyle=" + cfType+ "&type=align-content")
+  // }
+
+
+  showGridView(show : boolean) {
+    this.showGrid = show
+  }
+
+  openAPIDetailsDialgue(apiDetails : any) {
+    const dialogRef = this.dialog.open(ApiDetailsComponent,{
+      panelClass: 'api-details-class'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }

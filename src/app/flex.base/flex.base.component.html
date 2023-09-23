@@ -66,13 +66,13 @@
           <span class="closeIcon"><i class="fa-solid fa-xmark"></i></span>
 
           <div class="filterIcons">
-            <span><i class="fa-solid fa-grip"></i></span>
-            <span><i class="fa-solid fa-bars"></i></span>
+            <span (click)="showGridView(true)" ><i class="fa-solid fa-grip"></i></span>
+            <span (click)="showGridView(false)" ><i class="fa-solid fa-bars"></i></span>
           </div>
         </div>
       </div>
-      <div *ngIf="gridView" class="gridContainer">
-        <div *ngFor="let grid of cardContent" class="cardContainer">
+      <div *ngIf="showGrid" class="gridContainer">
+        <div *ngFor="let grid of cardContent" class="cardContainer" (click)="openAPIDetailsDialgue(grid)">
           <div class="top">
             <div class="type">{{ grid.type }}</div>
             <div class="rating">
@@ -90,7 +90,7 @@
         </div>
       </div>
 
-      <div *ngIf="tableView" class="gridContainer">
+      <div *ngIf="!showGrid" class="gridContainer">
         <div class="tableContainer">
           <div class="tableHead">
             <div class="tableContent">Name</div>
@@ -99,7 +99,7 @@
             <div class="tableContent">Rating</div>
           </div>
 
-          <div class="tableData" *ngFor="let grid of cardContent">
+          <div class="tableData" *ngFor="let grid of cardContent"  (click)="openAPIDetailsDialgue(grid)">
             <div class="tableContent">{{ grid.name }}</div>
             <div class="tableContent">
               <img src="../../assets/api_icon.png" />{{ grid.type }}

@@ -1,0 +1,38 @@
+
+.dataLeft {
+  width: 100%;
+  background-color: #f8e9a1;
+}
+
+.deploymentTable {
+  display: inline-block !important;
+  width: 100%;
+  border: 1px solid #374785;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px grey;
+
+  .deploymentHead {
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    background-color: #374785;
+    color: white;
+    padding: 20px 7px;
+  }
+
+  .deployementRow {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 5px;
+    border-bottom: 1px solid #374785;
+  }
+
+  .deployementLeft {
+    width: 40%;
+  }
+
+  .deployementRight {
+    width: 60%;
+  }
+}
