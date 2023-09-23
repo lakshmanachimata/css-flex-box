@@ -155,11 +155,11 @@ mat-grid-tile {
 .gridContainer {
   display: flex;
   flex-wrap: wrap;
-  width: calc(100% + 15px);
+  width: calc(100%);
   margin-left: -7.5px;
 }
 .cardContainer {
-  width: calc(30% - 15px);
+  width: calc(30%);
   margin: 7.5px;
   background-color: white;
   border-radius: 4px;
@@ -204,7 +204,7 @@ mat-grid-tile {
 }
 
 .tableContainer {
-  width: 100%;
+  width: 93%;
   // background-color: white;
 
   .tableHead {
