@@ -18,4 +18,10 @@ export class ApiDetailsComponent {
   setApiDetailsData(apiDetails: any) {
     this.apiDetailsData = apiDetails
   }
+  viewAPIJSON() {
+
+  }
+  downloadAPIJSON() {
+
+  }
 }
