@@ -1,31 +1,92 @@
 <div class="conatiner">
   <div class="banner">
-    <div>Welcome to your API Listing portal</div>
+    <div class="bannerHead">Welcome to your API Listing portal</div>
+    <div class="bannerSubHead">List all your apis</div>
   </div>
-
-
 
   <div class="dataContainer">
     <div class="dataLeft">
-      <label for="deployment">Deployment Details</label>
+      <div class="deploymentTable">
+        <div class="deploymentHead" for="deployment">Deployment Details</div>
+        <div class="deployementRow">
+          <div class="deployementLeft">Item 1</div>
+          <div class="deployementRight">sdfasdffdh</div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Item 1</div>
+          <div class="deployementRight">sdfasdffdh</div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Item 1</div>
+          <div class="deployementRight">sdfasdffdh</div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Item 1</div>
+          <div class="deployementRight">sdfasdffdh</div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Item 1</div>
+          <div class="deployementRight">sdfasdffdh</div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Item 1</div>
+          <div class="deployementRight"><a href="#">VIEW</a></div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Item 1</div>
+          <div class="deployementRight"><a href="#">DOWNLOAD</a></div>
+        </div>
+      </div>
     </div>
 
     <div class="dataRight">
       <div class="apiListHeader">
-          <label class="assets">Assets </label>
+        <div class="assets">Assets</div>
+
+        <div class="searchContainer">
           <select class="apiType" name="status">
             <option [value]="1">Active</option>
             <option [value]="0">In Active</option>
           </select>
-          <input class="apiSearch" type="text" placeholder="Search APIs" #filter />
+          <span class="searchIcon"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+          <input
+            class="apiSearch"
+            type="text"
+            placeholder="Search APIs"
+            #filter
+          />
+          <span class="closeIcon"><i class="fa-solid fa-xmark"></i></span>
+
+          <div class="filterIcons">
+            <span><i class="fa-solid fa-grip"></i></span>
+            <span><i class="fa-solid fa-bars"></i></span>
+          </div>
+        </div>
       </div>
       <div *ngIf="gridView" class="gridContainer">
         <div *ngFor="let grid of cardContent" class="cardContainer">
           <div class="top">
             <div class="type">{{ grid.type }}</div>
-            <div class="rating">{{ grid.rating }}</div>
+            <div class="rating">
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+              <span><i class="fa-solid fa-star"></i></span>
+            </div>
           </div>
-          <div class="bottom">{{ grid.name }}</div>
+          <div class="bottom">
+            <img src="../../assets/api_icon.png" />
+            {{ grid.name }}
+          </div>
         </div>
       </div>
 
@@ -40,7 +101,9 @@
 
           <div class="tableData" *ngFor="let grid of cardContent">
             <div class="tableContent">{{ grid.name }}</div>
-            <div class="tableContent">{{ grid.type }}</div>
+            <div class="tableContent">
+              <img src="../../assets/api_icon.png" />{{ grid.type }}
+            </div>
             <div class="tableContent">{{ grid.dateModified }}</div>
             <div class="tableContent">{{ grid.rating }}</div>
           </div>

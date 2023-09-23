@@ -36,8 +36,8 @@ export class FlexBaseComponent {
   //   this.router.navigateByUrl("/flexitype?flexstyle=" + cfType+ "&type=align-content")
   // }
 
-  gridView = true;
-  tableView = false;
+  gridView = false;
+  tableView = true;
 
   cardContent = [
     {
