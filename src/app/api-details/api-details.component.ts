@@ -3,7 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-api-details',
   templateUrl: './api-details.component.html',
-  styleUrls: ['./api-details.component.scss'],
+  styleUrls: ['./api-details.component.css'],
 })
 export class ApiDetailsComponent {
   apiDetailsData : any = {}

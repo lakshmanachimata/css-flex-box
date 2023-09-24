@@ -5,7 +5,7 @@ import {ApiDetailsComponent} from '../api-details/api-details.component'
 @Component({
   selector: "app-flex.base",
   templateUrl: "./flex.base.component.html",
-  styleUrls: ["./flex.base.component.scss"],
+  styleUrls: ["./flex.base.component.css"],
 })
 export class FlexBaseComponent {
   title = "API Listing App";

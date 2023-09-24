@@ -1,4 +1,3 @@
-// @import url("../../shared/varaibles");
 
 mat-grid-tile {
   background: lightblue;
@@ -170,48 +169,46 @@ mat-grid-tile {
   color: #a8d0e6;
   box-shadow: 2px 2px 3px grey;
   cursor: pointer;
+}
 
-  .top {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+
+.rating {
+  span {
+    font-size: 10px;
+    margin: 0 3px;
+    color: #f8e9a1;
   }
+}
+.bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  font-size: 16px;
+  font-weight: bold;
 
-  .bottom {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 120px;
-    font-size: 16px;
-    font-weight: bold;
-
-    img {
-      width: 50px;
-      margin-bottom: 10px;
-    }
-  }
-
-  .rating {
-    span {
-      font-size: 10px;
-      margin: 0 3px;
-      color: #f8e9a1;
-    }
+  img {
+    width: 50px;
+    margin-bottom: 10px;
   }
 }
 
 .tableContainer {
   width: 93%;
-  // background-color: white;
 
   .tableHead {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    // padding: 10px 7px;
     font-weight: bold;
     background-color: #374785;
     color: white;
