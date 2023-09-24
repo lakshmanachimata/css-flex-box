@@ -61,6 +61,7 @@ mat-grid-tile {
   background-color: #374785;
   color: white;
   padding: 20px 7px;
+  text-align: center;
 }
 
 .deployementRow {

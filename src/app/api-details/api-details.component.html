@@ -1,49 +1,48 @@
-
 <mat-dialog-content class="mat-typography" *ngIf="apiDetailsData">
-    <div class="dataLeft">
-      <div class="deploymentTable">
-        <div class="deploymentHead" for="deployment">Deployment Details</div>
-        <div class="deployementRow">
-          <div class="deployementLeft">API ID</div>
-          <div class="deployementRight">{{apiDetailsData.id}}</div>
-        </div>
+  <div class="closeicon"><i class="fa-solid fa-xmark"></i></div>
+  <div class="dataLeft">
+    <div class="deploymentTable">
+      <div class="deploymentHead" for="deployment">Deployment Details</div>
+      <div class="deployementRow">
+        <div class="deployementLeft">API ID</div>
+        <div class="deployementRight">{{ apiDetailsData.id }}</div>
+      </div>
 
-        <div class="deployementRow">
-          <div class="deployementLeft">API Type</div>
-          <div class="deployementRight">{{apiDetailsData.type}}</div>
-        </div>
+      <div class="deployementRow">
+        <div class="deployementLeft">API Type</div>
+        <div class="deployementRight">{{ apiDetailsData.type }}</div>
+      </div>
 
-        <div class="deployementRow">
-          <div class="deployementLeft">API Name</div>
-          <div class="deployementRight">{{apiDetailsData.name}}</div>
-        </div>
+      <div class="deployementRow">
+        <div class="deployementLeft">API Name</div>
+        <div class="deployementRight">{{ apiDetailsData.name }}</div>
+      </div>
 
-        <div class="deployementRow">
-          <div class="deployementLeft">API Modified On</div>
-          <div class="deployementRight">{{apiDetailsData.dateModified}}</div>
-        </div>
+      <div class="deployementRow">
+        <div class="deployementLeft">API Modified On</div>
+        <div class="deployementRight">{{ apiDetailsData.dateModified }}</div>
+      </div>
 
-        <div class="deployementRow">
-          <div class="deployementLeft">API Rating</div>
-          <div class="deployementRight">{{apiDetailsData.rating}}</div>
-        </div>
+      <div class="deployementRow">
+        <div class="deployementLeft">API Rating</div>
+        <div class="deployementRight">{{ apiDetailsData.rating }}</div>
+      </div>
 
-        <div class="deployementRow">
-          <div class="deployementLeft">View API JSON</div>
-          <div class="viewAPI" (click)="viewAPIJSON()">VIEW</div>
-        </div>
-        <div class="deployementRow" *ngIf="viewJSON">
-          <div class="deployementLeft">API JSON</div>
-          <div class="downloadAPI"  >{{apiDetailsString}}</div>
-        </div>
-        <div class="deployementRow" >
-          <div class="deployementLeft">Download API JSON</div>
-          <div class="downloadAPI" (click)="downloadAPIJSON()" >DOWNLOAD</div>
-        </div>
+      <div class="deployementRow">
+        <div class="deployementLeft">View API JSON</div>
+        <div class="viewAPI" (click)="viewAPIJSON()">VIEW</div>
+      </div>
+      <div class="deployementRow" *ngIf="viewJSON">
+        <div class="deployementLeft">API JSON</div>
+        <div class="downloadAPI">{{ apiDetailsString }}</div>
+      </div>
+      <div class="deployementRow">
+        <div class="deployementLeft">Download API JSON</div>
+        <div class="downloadAPI" (click)="downloadAPIJSON()">DOWNLOAD</div>
       </div>
     </div>
+  </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Close</button>
 </mat-dialog-actions>
-

@@ -18,12 +18,16 @@ html {
   --secondary-color: #374785;
 }
 .api-details-class {
-  mat-dialog-container{
+  mat-dialog-container {
     display: inline-block;
     height: 620px;
     width: 800px;
     border-radius: 10px;
     background: lightcyan;
     color: #039be5;
+  }
+
+  .mdc-dialog .mdc-dialog__content {
+    padding: 0 !important;
   }
 }
