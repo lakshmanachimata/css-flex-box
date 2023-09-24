@@ -1,7 +1,7 @@
 <mat-dialog-content class="mat-typography" *ngIf="apiDetailsData">
-  <div class="closeicon"><i class="fa-solid fa-xmark"></i></div>
   <div class="dataLeft">
     <div class="deploymentTable">
+      <div class="closeicon" (click)="closeDialog()"><i class="fa-solid fa-xmark"></i></div>
       <div class="deploymentHead" for="deployment">Deployment Details</div>
       <div class="deployementRow">
         <div class="deployementLeft">API ID</div>
@@ -43,6 +43,6 @@
     </div>
   </div>
 </mat-dialog-content>
-<mat-dialog-actions align="end">
+<!-- <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Close</button>
-</mat-dialog-actions>
+</mat-dialog-actions> -->
