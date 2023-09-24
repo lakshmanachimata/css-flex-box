@@ -182,6 +182,8 @@ export class FlexBaseComponent {
   openAPIDetailsDialgue(apiDetails : any) {
     const dialogRef = this.dialog.open(ApiDetailsComponent,{
       panelClass: 'api-details-class',
+      disableClose: true,
+      backdropClass: 'transparent',
       data:apiDetails
     });
     dialogRef.afterClosed().subscribe(result => {

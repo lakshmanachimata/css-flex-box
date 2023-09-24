@@ -27,6 +27,6 @@ export class ApiDetailsComponent {
 
   }
   closeDialog() {
-
+    this.dialogRef.close()
   }
 }

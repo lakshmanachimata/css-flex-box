@@ -10,14 +10,20 @@
   border-radius: 5px;
   box-shadow: 2px 2px 3px grey;
 }
-
-.deploymentHead {
+.deployementHeader {
   align-items: center;
   width: 100%;
   font-weight: bold;
   background-color: #374785;
   color: white;
   padding: 20px 7px;
+  display: inline-flex;
+}
+.deploymentHead {
+  align-items: center;
+  width: 95%;
+  font-weight: bold;
+  color: white;
   text-align: center;
 }
 
@@ -36,6 +42,7 @@
 .deployementRight {
   width: 60%;
 }
+
 .viewAPI {
   width: 60%;
   cursor: pointer;
@@ -49,8 +56,8 @@
 
 .closeicon {
   display: flex;
-  width: 100%;
+  align-items: end;
+  width: 3%;
   justify-content: flex-end;
-  padding: 15px;
   cursor: pointer;
 }

@@ -1,8 +1,10 @@
 <mat-dialog-content class="mat-typography" *ngIf="apiDetailsData">
   <div class="dataLeft">
     <div class="deploymentTable">
-      <div class="closeicon" (click)="closeDialog()"><i class="fa-solid fa-xmark"></i></div>
-      <div class="deploymentHead" for="deployment">Deployment Details</div>
+      <div class="deployementHeader">
+        <div class="deploymentHead" for="deployment">Deployment Details</div>
+        <div class="closeicon" (click)="closeDialog()"><i class="fa-solid fa-xmark"></i></div>
+      </div>
       <div class="deployementRow">
         <div class="deployementLeft">API ID</div>
         <div class="deployementRight">{{ apiDetailsData.id }}</div>
