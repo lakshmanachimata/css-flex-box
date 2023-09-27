@@ -4,10 +4,10 @@ import {MatDialog} from '@angular/material/dialog';
 import {ApiDetailsComponent} from '../api-details/api-details.component'
 @Component({
   selector: "app-flex.base",
-  templateUrl: "./flex.base.component.html",
-  styleUrls: ["./flex.base.component.css"],
+  templateUrl: "./deployment.component.html",
+  styleUrls: ["./deployment.component.css"],
 })
-export class FlexBaseComponent {
+export class DeploymentComponent {
   title = "API Listing App";
   cssFelxJCTypes = [
     "flex-start",
