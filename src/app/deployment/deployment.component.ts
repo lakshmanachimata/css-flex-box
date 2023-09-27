@@ -6,7 +6,7 @@ import {ApiDetailsComponent} from '../api-details/api-details.component'
 import { Deployment } from "../interface/deployment-interface";
 import { FileInfo } from "../interface/Fileinfo";
 @Component({
-  selector: "app-flex.base",
+  selector: "app-deployment",
   templateUrl: "./deployment.component.html",
   styleUrls: ["./deployment.component.css"],
 })

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DeploymentComponent } from './flex.base/deployment.component';
+import { DeploymentComponent } from './deployment/deployment.component';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
