@@ -9,31 +9,68 @@
       <div class="deploymentTable">
         <div class="deploymentHead" for="deployment">Deployment Details</div>
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
-          <div class="deployementRight">sdfasdffdh</div>
+          <div class="deployementLeft">Deployment ID</div>
+          <div class="deployementRight">{{deploymentInfo?.deploymentId}}</div>
         </div>
 
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
-          <div class="deployementRight">sdfasdffdh</div>
+          <div class="deployementLeft">Artifact Name</div>
+          <div class="deployementRight">{{deploymentInfo?.artifactName}}</div>
         </div>
 
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
-          <div class="deployementRight">sdfasdffdh</div>
+          <div class="deployementLeft">AIT</div>
+          <div class="deployementRight">{{deploymentInfo?.ait}}</div>
         </div>
 
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
-          <div class="deployementRight">sdfasdffdh</div>
+          <div class="deployementLeft">Catalog</div>
+          <div class="deployementRight">{{deploymentInfo?.catalog}}</div>
         </div>
 
         <div class="deployementRow">
-          <div class="deployementLeft">Item 1</div>
-          <div class="deployementRight">sdfasdffdh</div>
+          <div class="deployementLeft">Organization ID</div>
+          <div class="deployementRight">{{deploymentInfo?.organizationId}}</div>
         </div>
 
         <div class="deployementRow">
+          <div class="deployementLeft">Environment Name</div>
+          <div class="deployementRight">{{deploymentInfo?.environmentName}}</div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Resume Count</div>
+          <div class="deployementRight">{{deploymentInfo?.resumeCount}}</div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Status</div>
+          <div class="deployementRight">{{deploymentInfo?.status}}</div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Initiated By</div>
+          <div class="deployementRight">{{deploymentInfo?.initiatedBy}}</div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Initiated Date</div>
+          <div class="deployementRight">{{deploymentInfo?.initiatedDate?.toLocaleDateString('en-IN')}}</div>
+        </div>
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Resumed By</div>
+          <div class="deployementRight">{{deploymentInfo?.resumedBy}}</div>
+        </div>
+
+
+        <div class="deployementRow">
+          <div class="deployementLeft">Resumed Date</div>
+          <div class="deployementRight">{{deploymentInfo?.resumedDate?.toLocaleDateString('en-IN')}}</div>
+        </div>
+
+
+        <!-- <div class="deployementRow">
           <div class="deployementLeft">Item 1</div>
           <div class="deployementRight"><a href="#">VIEW</a></div>
         </div>
@@ -41,7 +78,7 @@
         <div class="deployementRow">
           <div class="deployementLeft">Item 1</div>
           <div class="deployementRight"><a href="#">DOWNLOAD</a></div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -77,7 +114,7 @@
       <div *ngIf="showGrid" class="gridContainer">
         <div *ngFor="let grid of cardFilterContent" class="cardContainer" (click)="openAPIDetailsDialgue(grid)">
           <div class="top">
-            <div class="type">{{ grid.type }}</div>
+            <div class="type">{{ grid.FileID }}</div>
             <div class="rating">
               <span *ngIf="grid.rating >= 1"><i class="fa-solid fa-star"></i></span>
               <span *ngIf="grid.rating >= 2"><i class="fa-solid fa-star"></i></span>
@@ -88,7 +125,7 @@
           </div>
           <div class="bottom">
             <img src="../../assets/api_icon.png" />
-            {{ grid.name }}
+            {{ grid.FileName }}
           </div>
         </div>
       </div>

@@ -4,4 +4,5 @@ export interface FileInfo {
   FilePublishStatus :  string;
   FilePublishError : string;
   ModifiedAt : Date;
+  rating : number;
 }

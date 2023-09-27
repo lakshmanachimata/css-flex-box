@@ -10,7 +10,7 @@ export interface Deployment {
   resumeCount : string;
   status : string;
   initiatedBy : String;
-  initiatedDate : string;
+  initiatedDate : Date;
   resumedBy : string;
   resumedDate : Date;
   fileDetails : FileInfo[];
