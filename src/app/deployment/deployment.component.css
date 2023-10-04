@@ -20,46 +20,46 @@ mat-grid-tile {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-  opacity: 0.8;
+  opacity:1;
 }
 
 .bannerHead {
   font-size: 38px;
   font-weight: bold;
-  color: var(--primary-color);
+  color: #6b6c6d;
 }
 
 .bannerSubHead {
   font-size: 20px;
   margin-top: 15px;
-  color: var(--secondary-color);
+  color: #6b6c6d;
 }
 
 .dataContainer {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background-color: #a8d0e6;
+  background-color: #f9faf8;
   min-height: calc(100vh - 25vh);
 }
 .dataLeft {
   width: 20%;
   padding: 20px 10px;
-  background-color: #f4ebba;
+  background-color: #fff;
 }
 
 .deploymentTable {
   width: 100%;
-  border: 1px solid #374785;
+  border: 1px solid #eee;
   border-radius: 5px;
-  box-shadow: 2px 2px 3px grey;
+  box-shadow: 2px 2px 3px black;
 }
 
 .deploymentHead {
   width: 100%;
   font-weight: bold;
-  background-color: #374785;
-  color: white;
+  background-color: #eee;
+  color: #6b6c6d;
   padding: 20px 7px;
   text-align: center;
 }
@@ -69,7 +69,7 @@ mat-grid-tile {
   display: flex;
   flex-wrap: wrap;
   padding: 20px 5px;
-  border-bottom: 1px solid #374785;
+  border-top: 1px solid black;
 }
 
 .deployementLeft {
@@ -126,7 +126,7 @@ mat-grid-tile {
   background: white;
   box-shadow: 2px 2px 3px grey;
   border-radius: 5px 0 0 5px;
-  color: var(--primary-color);
+  color: #6b6c6d;
   cursor: pointer;
 }
 .closeIcon {
@@ -141,7 +141,7 @@ mat-grid-tile {
 }
 
 .filterIcons span {
-  color: var(--primary-color);
+  color: #6b6c6d;
   font-size: 25px;
   margin-right: 10px;
   cursor: pointer;
@@ -149,6 +149,7 @@ mat-grid-tile {
 .dataRight {
   width: 80%;
   padding: 0 30px;
+  background-color: #fff;
 }
 
 .gridContainer {
@@ -165,8 +166,8 @@ mat-grid-tile {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  background-color: #374785;
-  color: #a8d0e6;
+  background-color: #eee;
+  color: #272f331a;
   box-shadow: 2px 2px 3px grey;
   cursor: pointer;
 }
@@ -181,7 +182,7 @@ mat-grid-tile {
 .rating span {
   font-size: 10px;
   margin: 0 3px;
-  color: #f8e9a1;
+  color: #6b6c6d;
 }
 .bottom {
   display: flex;
@@ -212,8 +213,8 @@ mat-grid-tile {
   display: flex;
   flex-wrap: wrap;
   font-weight: bold;
-  background-color: #374785;
-  color: white;
+  background-color: #eee;
+  color: #010101;
 }
 .tableData {
   width: 100%;
@@ -226,7 +227,7 @@ mat-grid-tile {
 .tableContent {
   width: 25%;
   padding: 20px 7px;
-  border-bottom: 1px solid #374785;
+  border-bottom: 1px solid #aaa;
   display: inline-flex;
   align-items: center;
 }

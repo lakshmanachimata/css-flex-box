@@ -106,12 +106,12 @@
           <span class="closeIcon" (click)="clearSearch()"><i class="fa-solid fa-xmark"></i></span>
 
           <div class="filterIcons">
-            <span (click)="showGridView(true)" [ngStyle]="getGICONStyle()" ><i class="fa-solid fa-grip"></i></span>
-            <span (click)="showGridView(false)" [ngStyle]="getTICONStyle()"><i class="tableIcon fa-solid fa-bars"></i></span>
+            <!-- <span (click)="showGridView(true)" [ngStyle]="getGICONStyle()" ><i class="fa-solid fa-grip"></i></span> -->
+            <!-- <span (click)="showGridView(false)" [ngStyle]="getTICONStyle()"><i class="tableIcon fa-solid fa-bars"></i></span> -->
           </div>
         </div>
       </div>
-      <div *ngIf="showGrid" class="gridContainer">
+      <!-- <div *ngIf="showGrid" class="gridContainer">
         <div *ngFor="let grid of cardFilterContent" class="cardContainer" (click)="openAPIDetailsDialgue(grid)">
           <div class="top">
             <div class="type">{{ grid.FileID }}</div>
@@ -128,7 +128,7 @@
             <div class="modifiedat">Modified At :    {{grid.ModifiedAt.toLocaleDateString('en-IN')}}</div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div *ngIf="!showGrid" class="gridContainer">
         <div class="tableContainer">
@@ -140,12 +140,19 @@
           </div>
 
           <div class="tableData" *ngFor="let grid of cardFilterContent"  (click)="openAPIDetailsDialgue(grid)">
-            <div class="tableContent">{{ grid.name }}</div>
+            <div class="tableContent">{{ grid.FileName }}</div>
             <div class="tableContent">
-              <img src="../../assets/api_icon.png" />{{ grid.type }}
+              <img src="../../assets/api_icon.png" />{{ grid.FileID }}
             </div>
             <div class="tableContent">{{ grid.ModifiedAt.toLocaleDateString('en-IN') }}</div>
-            <div class="tableContent">{{ grid.rating }}</div>
+            <!-- <div class="tableContent">{{ grid.rating }}</div> -->
+            <div class="tableContent rating">
+              <span *ngIf="grid.rating >= 1"><i class="fa-solid fa-star"></i></span>
+              <span *ngIf="grid.rating >= 2"><i class="fa-solid fa-star"></i></span>
+              <span *ngIf="grid.rating >= 3"><i class="fa-solid fa-star"></i></span>
+              <span *ngIf="grid.rating >= 4"><i class="fa-solid fa-star"></i></span>
+              <span *ngIf="grid.rating >= 5"><i class="fa-solid fa-star"></i></span>
+            </div>
           </div>
         </div>
       </div>

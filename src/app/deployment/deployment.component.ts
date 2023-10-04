@@ -36,7 +36,7 @@ export class DeploymentComponent implements OnInit {
     "baseline",
   ];
 
-  showGrid : boolean = true
+  showGrid : boolean = false
   searchText : string = ""
 
 
@@ -205,7 +205,7 @@ export class DeploymentComponent implements OnInit {
   getGICONStyle() {
     if(this.showGrid) {
       return {
-        'background-color': '#374785',
+        'background-color': '#eee',
         'color': '#fff',
         'padding' : '2px',
         'border-radius': '5px'
@@ -221,7 +221,7 @@ export class DeploymentComponent implements OnInit {
   getTICONStyle() {
     if(!this.showGrid) {
       return {
-        'background-color': '#374785',
+        'background-color': '#eee',
         'color': '#fff',
         'padding' : '2px',
         'border-radius': '5px'

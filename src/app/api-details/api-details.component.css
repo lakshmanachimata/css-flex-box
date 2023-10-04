@@ -1,12 +1,12 @@
 .dataLeft {
   width: 100%;
-  background-color: #f4ebba;
+  background-color: #eee;
 }
 
 .deploymentTable {
   display: inline-block !important;
   width: 100%;
-  border: 1px solid #374785;
+  border: 1px solid #eee;
   border-radius: 5px;
   box-shadow: 2px 2px 3px grey;
 }
@@ -14,8 +14,8 @@
   align-items: center;
   width: 100%;
   font-weight: bold;
-  background-color: #374785;
-  color: white;
+  background-color: #eee;
+  color: 6b6c6d;
   padding: 20px 7px;
   display: inline-flex;
 }
@@ -23,7 +23,7 @@
   align-items: center;
   width: 95%;
   font-weight: bold;
-  color: white;
+  color: 6b6c6d;
   text-align: center;
 }
 
@@ -32,7 +32,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 20px 5px;
-  border-bottom: 1px solid #374785;
+  border-bottom: 1px solid #eee;
 }
 
 .deployementLeft {

@@ -13,10 +13,6 @@ html {
   font-family: "Roboto", sans-serif !important;
 }
 
-:root {
-  --primary-color: #24305e;
-  --secondary-color: #374785;
-}
 .api-details-class {
   mat-dialog-container {
     display: inline-block;
@@ -24,7 +20,7 @@ html {
     width: 800px;
     border-radius: 10px;
     background: lightcyan;
-    color: #039be5;
+    color: #6b6c6d;
   }
 
   .mdc-dialog .mdc-dialog__content {
