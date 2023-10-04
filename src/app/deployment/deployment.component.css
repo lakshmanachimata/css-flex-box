@@ -194,9 +194,13 @@ mat-grid-tile {
   font-weight: bold;
 }
 
+
 .bottom img {
   width: 50px;
   margin-bottom: 10px;
+}
+.modifiedat {
+  margin-top: 10px;
 }
 
 .tableContainer {

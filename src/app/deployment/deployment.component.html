@@ -124,8 +124,8 @@
             </div>
           </div>
           <div class="bottom">
-            <img src="../../assets/api_icon.png" />
-            {{ grid.FileName }}
+            <img src="../../assets/api_icon.png" />{{ grid.FileName }}
+            <div class="modifiedat">Modified At :    {{grid.ModifiedAt.toLocaleDateString('en-IN')}}</div>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@
             <div class="tableContent">
               <img src="../../assets/api_icon.png" />{{ grid.type }}
             </div>
-            <div class="tableContent">{{ grid.dateModified }}</div>
+            <div class="tableContent">{{ grid.ModifiedAt.toLocaleDateString('en-IN') }}</div>
             <div class="tableContent">{{ grid.rating }}</div>
           </div>
         </div>
