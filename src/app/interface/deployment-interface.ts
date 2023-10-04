@@ -7,7 +7,7 @@ export interface Deployment {
   catalog : string;
   organizationId : string;
   environmentName : string;
-  resumeCount : string;
+  resumeCount : number;
   status : string;
   initiatedBy : String;
   initiatedDate : Date;

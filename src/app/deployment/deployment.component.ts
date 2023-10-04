@@ -52,7 +52,7 @@ export class DeploymentComponent implements OnInit {
       catalog : "catalog val",
       organizationId : "org id",
       environmentName : "env Name",
-      resumeCount : "resume cnt",
+      resumeCount : 1,
       status : "status",
       initiatedBy : "init by",
       initiatedDate : new Date(),
