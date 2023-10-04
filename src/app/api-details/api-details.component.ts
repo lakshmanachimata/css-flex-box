@@ -1,6 +1,6 @@
 import { Component, Inject, Optional } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { FileInfo } from '../interface/Fileinfo';
+import { FileInfo } from '../interface/file-interface';
 @Component({
   selector: 'app-api-details',
   templateUrl: './api-details.component.html',

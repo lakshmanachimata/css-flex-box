@@ -4,7 +4,7 @@ import { Router , ActivatedRoute} from "@angular/router";
 import {MatDialog} from '@angular/material/dialog';
 import {ApiDetailsComponent} from '../api-details/api-details.component'
 import { Deployment } from "../interface/deployment-interface";
-import { FileInfo } from "../interface/Fileinfo";
+import { FileInfo } from "../interface/file-interface";
 @Component({
   selector: "app-deployment",
   templateUrl: "./deployment.component.html",
@@ -47,7 +47,7 @@ export class DeploymentComponent implements OnInit {
   ngOnInit() {
     this.deploymentInfo = {
       artifactName : "a name",
-      deploymentId : 1111,
+      deploymentID : 1111,
       ait: 1121,
       catalog : "catalog val",
       organizationId : "org id",
@@ -184,7 +184,7 @@ export class DeploymentComponent implements OnInit {
     this.cardFilterContent = this.deploymentInfo?.fileDetails
     let idVal = this.route.snapshot.paramMap.get('id')
     if(idVal != null) {
-      this.deploymentInfo.deploymentId = parseInt(idVal)
+      this.deploymentInfo.deploymentID = parseInt(idVal)
     }
   }
 

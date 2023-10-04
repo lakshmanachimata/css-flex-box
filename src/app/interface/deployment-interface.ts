@@ -1,8 +1,8 @@
-import { FileInfo } from "./Fileinfo";
+import { FileInfo } from "./file-interface";
 
 export interface Deployment {
   artifactName: string;
-  deploymentId : number;
+  deploymentID : number;
   ait: number;
   catalog : string;
   organizationId : string;
