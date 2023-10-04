@@ -136,7 +136,7 @@
             <div class="tableContent">Name</div>
             <div class="tableContent">Type</div>
             <div class="tableContent">Date Modified</div>
-            <div class="tableContent">Rating</div>
+            <div class="tableContent">Status</div>
           </div>
 
           <div class="tableData" *ngFor="let grid of cardFilterContent"  (click)="openAPIDetailsDialgue(grid)">
@@ -145,14 +145,15 @@
               <img src="../../assets/api_icon.png" />{{ grid.FileID }}
             </div>
             <div class="tableContent">{{ grid.ModifiedAt.toLocaleDateString('en-IN') }}</div>
+            <div class="tableContent">{{ grid.Status}}</div>
             <!-- <div class="tableContent">{{ grid.rating }}</div> -->
-            <div class="tableContent rating">
+            <!-- <div class="tableContent rating">
               <span *ngIf="grid.Status >= 1"><i class="fa-solid fa-star"></i></span>
               <span *ngIf="grid.Status >= 2"><i class="fa-solid fa-star"></i></span>
               <span *ngIf="grid.Status >= 3"><i class="fa-solid fa-star"></i></span>
               <span *ngIf="grid.Status >= 4"><i class="fa-solid fa-star"></i></span>
               <span *ngIf="grid.Status >= 5"><i class="fa-solid fa-star"></i></span>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

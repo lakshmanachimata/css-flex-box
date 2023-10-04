@@ -65,7 +65,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "4"
+          Status : "PASS"
         },
         {
           FileID : 2222,
@@ -73,7 +73,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "5"
+          Status : "PASS"
         },
         {
           FileID : 3333,
@@ -81,7 +81,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "3"
+          Status : "PASS"
         },
         {
           FileID : 6789,
@@ -89,7 +89,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "4"
+          Status : "PASS"
         },
         {
           FileID : 4444,
@@ -97,7 +97,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "2"
+          Status : "FAIL"
         },
         {
           FileID : 5555,
@@ -105,7 +105,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "1"
+          Status : "FAIL"
         },
         {
           FileID : 6666,
@@ -113,7 +113,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "5"
+          Status : "PASS"
         },
         {
           FileID : 7777,
@@ -121,7 +121,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "4"
+          Status : "PASS"
         },
         {
           FileID : 8888,
@@ -129,7 +129,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "5"
+          Status : "PASS"
         },
         {
           FileID : 9999,
@@ -137,7 +137,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "3"
+          Status : "PASS"
         },
         {
           FileID : 1234,
@@ -145,7 +145,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "2"
+          Status : "FAIL"
         },
         {
           FileID : 3456,
@@ -153,7 +153,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "1"
+          Status : "FAIL"
         },
         {
           FileID : 4567,
@@ -161,7 +161,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "4"
+          Status : "PASS"
         },
         {
           FileID : 5678,
@@ -169,7 +169,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "3"
+          Status : "PASS"
         },
         {
           FileID : 7891,
@@ -177,7 +177,7 @@ export class DeploymentComponent implements OnInit {
           FilePublishStatus : "FP Status",
           FilePublishError : "FP Err",
           ModifiedAt : new Date(),
-          Status : "3"
+          Status : "PASS"
         },
       ],
     }
