@@ -16,7 +16,7 @@
   font-weight: bold;
   background-color: #eee;
   color: 6b6c6d;
-  padding: 20px 7px;
+  padding: 15px 5px;
   display: inline-flex;
 }
 .deploymentHead {
@@ -29,6 +29,7 @@
 
 .deployementRow {
   width: 100%;
+  min-width: 60% !important;
   display: flex;
   flex-wrap: wrap;
   padding: 12px 5px;
