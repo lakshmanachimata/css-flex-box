@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-flex.detail',
   templateUrl: './flex.detail.component.html',
-  styleUrls: ['./flex.detail.component.scss']
+  styleUrls: ['./flex.detail.component.css']
 })
 export class FlexDetailComponent {
 

@@ -45,14 +45,14 @@ mat-grid-tile {
 .dataLeft {
   width: 20%;
   padding: 20px 10px;
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 
 .deploymentTable {
   width: 100%;
   border: 1px solid #eee;
   border-radius: 5px;
-  box-shadow: 2px 2px 3px black;
+  box-shadow: 1px 1px 2px black;
 }
 
 .deploymentHead {
@@ -60,7 +60,7 @@ mat-grid-tile {
   font-weight: bold;
   background-color: #eee;
   color: #6b6c6d;
-  padding: 20px 7px;
+  padding: 15px 7px;
   text-align: center;
 }
 
@@ -68,7 +68,7 @@ mat-grid-tile {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 5px;
+  padding: 12px 5px;
   border-top: 1px solid black;
 }
 
@@ -96,41 +96,39 @@ mat-grid-tile {
 }
 
 .apiType {
-  height: 3em;
-  border-radius: 5px;
+  height: 2.8em;
+  border-radius: 5px 0 0 5px;
   padding: 5px;
-  width: 20%;
-  margin-right: 10px;
+  width: 15%;
   border: none;
   outline: none;
+  background-color: #eee;
   font-size: 16px;
-  box-shadow: 2px 2px 3px grey;
+  border-right: 2px solid #aaa;
 }
 .apiSearch {
-  height: 3em;
+  height: 2.8em;
   padding: 5px 7px;
-  border-radius: 0px;
-  width: 60%;
+  width: 72%;
   border: none;
   outline: none;
+  background-color: #eee;
   font-size: 16px;
-  box-shadow: 2px 2px 3px grey;
 }
 .searchIcon,
 .closeIcon {
   display: inline-flex;
-  height: 3em;
+  height: 2.8em;
   justify-content: center;
   align-items: center;
   padding: 0 15px;
-  background: white;
-  box-shadow: 2px 2px 3px grey;
-  border-radius: 5px 0 0 5px;
-  color: #6b6c6d;
+  background: #eee;
+  color: black;
   cursor: pointer;
 }
 .closeIcon {
   border-radius: 0 5px 5px 0;
+  border-right: 2px solid #aaa;
 }
 
 .filterIcons {
@@ -149,7 +147,7 @@ mat-grid-tile {
 .dataRight {
   width: 80%;
   padding: 0 30px;
-  background-color: #fff;
+  background-color: #fafafa;
 }
 
 .gridContainer {
@@ -213,8 +211,8 @@ mat-grid-tile {
   display: flex;
   flex-wrap: wrap;
   font-weight: bold;
-  background-color: #eee;
   color: #010101;
+  border-bottom: 2px solid #aaa;
 }
 .tableData {
   width: 100%;
@@ -226,7 +224,7 @@ mat-grid-tile {
 
 .tableContent {
   width: 25%;
-  padding: 20px 7px;
+  padding: 12px 7px;
   border-bottom: 1px solid #aaa;
   display: inline-flex;
   align-items: center;
