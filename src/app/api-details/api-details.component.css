@@ -44,6 +44,14 @@
 .deployementRight {
   width: 60%;
 }
+.deployementRightFailed {
+  width: 60%;
+  color: red;
+}
+.deployementRightSuccess {
+  width: 60%;
+  color: green;
+}
 
 .viewAPI {
   width: 60%;

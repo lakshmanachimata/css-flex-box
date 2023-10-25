@@ -25,7 +25,7 @@ export class ApiDetailsComponent {
     this.viewJSON = !this.viewJSON;
   }
   downloadAPIJSON() {
-
+    window.open("https://www.google.com", "_blank");
   }
   closeDialog() {
     this.dialogRef.close()
