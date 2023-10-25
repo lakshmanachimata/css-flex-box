@@ -17,7 +17,7 @@
 
       <div class="deployementRow">
         <div class="deployementLeft">Catalog Name</div>
-        <div class="deployementRight">{{ apiDetailsData.CatalogName }}</div>
+        <div class="deployementRight">{{ apiDetailsData.Catalog }}</div>
       </div>
 
       <div class="deployementRow">
@@ -27,7 +27,7 @@
 
       <div class="deployementRow">
         <div class="deployementLeft">Organization Name</div>
-        <div class="deployementRight">{{ apiDetailsData.OrgName }}</div>
+        <div class="deployementRight">{{ apiDetailsData.MuleEnvironmentName }}</div>
       </div>
 
       <div class="deployementRow">
@@ -40,7 +40,7 @@
         <div class="deployementRightSuccess" *ngIf="apiDetailsData.FilePublishStatus == 'Success'">{{ apiDetailsData.FilePublishError }}</div>
         <div class="deployementRightFailed" *ngIf="apiDetailsData.FilePublishStatus == 'Failed'">{{ apiDetailsData.FilePublishError }}</div>
       </div>
-      <div class="deployementRow" *ngIf="apiDetailsData.Status == 'PASS'">
+      <div class="deployementRow" *ngIf="apiDetailsData.Status == 'C'">
         <div class="deployementLeft">Link to Asset</div>
         <div class="downloadAPI" (click)="downloadAPIJSON()">Asset</div>
       </div>

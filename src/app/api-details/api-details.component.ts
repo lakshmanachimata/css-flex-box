@@ -1,19 +1,20 @@
 import { Component, Inject, Optional } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { FileInfo } from '../interface/file-interface';
+import { Deployment } from '../interface/deployment-interface';
 @Component({
   selector: 'app-api-details',
   templateUrl: './api-details.component.html',
   styleUrls: ['./api-details.component.css'],
 })
 export class ApiDetailsComponent {
-  apiDetailsData? : FileInfo
+  apiDetailsData? : Deployment
   viewJSON : boolean = false
   apiDetailsString: string = ""
   constructor(
     public dialogRef: MatDialogRef<ApiDetailsComponent>,
     //@Optional() is used to prevent error if no data is passed
-    @Optional() @Inject(MAT_DIALOG_DATA) public data: FileInfo) {
+    @Optional() @Inject(MAT_DIALOG_DATA) public data: Deployment) {
     this.apiDetailsData = {...data};
     this.apiDetailsString = JSON.stringify(this.apiDetailsData)
   }

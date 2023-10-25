@@ -12,9 +12,10 @@ import { FileInfo } from "../interface/file-interface";
 })
 export class DeploymentComponent implements OnInit {
 
-  deploymentInfo? : Deployment;
+  deploymentsInfo? : Deployment[];
   deplpymentId : number = 1
   selectedFile?: FileInfo
+  deploymentInfo? : Deployment;
 
   title = "API Listing App";
   cssFelxJCTypes = [
@@ -41,181 +42,64 @@ export class DeploymentComponent implements OnInit {
 
 
 
-  cardFilterContent: any= []
+  cardFilterContent: any = []
 
   constructor(private router: Router,public dialog: MatDialog, public route : ActivatedRoute) {}
   ngOnInit() {
-    this.deploymentInfo = {
-      artifactName : "a name",
-      deploymentID : 1111,
-      ait: 1121,
-      catalog : "catalog val",
-      organizationId : "org id",
-      environmentName : "env Name",
-      resumeCount : 1,
-      status : "status",
-      initiatedBy : "init by",
-      initiatedDate : new Date(),
-      resumedBy : "resume by",
-      resumedDate : new Date(),
-      fileDetails : [
-        {
-          FileID : 1111,
-          FileName : "fl_Name_1111.json",
-          CatalogName: "Catalog_1",
-          OrgName: "Org_1",
-          FilePublishStatus : "Success",
-          FilePublishError : "NO",
-          ModifiedAt : new Date(),
-          Status : "PASS"
-        },
-        {
-          FileID : 2222,
-          FileName : "fl_Name_2222.json",
-          CatalogName: "Catalog_3",
-          OrgName: "Org_2",
-          FilePublishStatus : "Success",
-          FilePublishError : "NO",
-          ModifiedAt : new Date(),
-          Status : "PASS"
-        },
-        {
-          FileID : 3333,
-          FileName : "fl_Name_3333.json",
-          CatalogName: "Catalog_4",
-          OrgName: "Org_3",
-          FilePublishStatus : "Success",
-          FilePublishError : "NO",
-          ModifiedAt : new Date(),
-          Status : "PASS"
-        },
-        {
-          FileID : 6789,
-          FileName : "fl_Name_6789.json",
-          CatalogName: "Catalog_4",
-          OrgName: "Org_1",
-          FilePublishStatus : "Success",
-          FilePublishError : "NO",
-          ModifiedAt : new Date(),
-          Status : "PASS"
-        },
-        {
-          FileID : 4444,
-          FileName : "fl_Name_4444.json",
-          CatalogName: "Catalog_4",
-          OrgName: "Org_2",
-          FilePublishStatus : "Failed",
-          FilePublishError : "Network timeout",
-          ModifiedAt : new Date(),
-          Status : "FAIL"
-        },
-        {
-          FileID : 5555,
-          FileName : "fl_Name_5555.json",
-          CatalogName: "Catalog_1",
-          OrgName: "Org_3",
-          FilePublishStatus : "Failed",
-          FilePublishError : "Deployment failed",
-          ModifiedAt : new Date(),
-          Status : "FAIL"
-        },
-        {
-          FileID : 6666,
-          FileName : "fl_Name_6666.json",
-          CatalogName: "Catalog_1",
-          OrgName: "Org_1",
-          FilePublishStatus : "Success",
-          FilePublishError : "NO",
-          ModifiedAt : new Date(),
-          Status : "PASS"
-        },
-        {
-          FileID : 7777,
-          FileName : "fl_Name_7777.json",
-          CatalogName: "Catalog_4",
-          OrgName: "Org_2",
-          FilePublishStatus : "Success",
-          FilePublishError : "NO",
-          ModifiedAt : new Date(),
-          Status : "PASS"
-        },
-        {
-          FileID : 8888,
-          FileName : "fl_Name_8888.json",
-          CatalogName: "Catalog_4",
-          OrgName: "Org_3",
-          FilePublishStatus : "Success",
-          FilePublishError : "NO",
-          ModifiedAt : new Date(),
-          Status : "PASS"
-        },
-        {
-          FileID : 9999,
-          FileName : "fl_Name_9999.json",
-          CatalogName: "Catalog_1",
-          OrgName: "Org_1",
-          FilePublishStatus : "Success",
-          FilePublishError : "",
-          ModifiedAt : new Date(),
-          Status : "PASS"
-        },
-        {
-          FileID : 1234,
-          FileName : "fl_Name_1234.json",
-          CatalogName: "Catalog_1",
-          OrgName: "Org_2",
-          FilePublishStatus : "Failed",
-          FilePublishError : "User Cancelled",
-          ModifiedAt : new Date(),
-          Status : "FAIL"
-        },
-        {
-          FileID : 3456,
-          FileName : "fl_Name_3456.json",
-          CatalogName: "Catalog_2",
-          OrgName: "Org_3",
-          FilePublishStatus : "Failed",
-          FilePublishError : "Incorrect format",
-          ModifiedAt : new Date(),
-          Status : "FAIL"
-        },
-        {
-          FileID : 4567,
-          FileName : "fl_Name_4567.json",
-          CatalogName: "Catalog_2",
-          OrgName: "Org_1",
-          FilePublishStatus : "Success",
-          FilePublishError : "NO",
-          ModifiedAt : new Date(),
-          Status : "PASS"
-        },
-        {
-          FileID : 5678,
-          FileName : "fl_Name_5678.json",
-          CatalogName: "Catalog_2",
-          OrgName: "Org_2",
-          FilePublishStatus : "Success",
-          FilePublishError : "NO",
-          ModifiedAt : new Date(),
-          Status : "PASS"
-        },
-        {
-          FileID : 7891,
-          FileName : "fl_Name_7891.json",
-          CatalogName: "Catalog_2",
-          OrgName: "Org_3",
-          FilePublishStatus : "Failed",
-          FilePublishError : "Unknown Error",
-          ModifiedAt : new Date(),
-          Status : "FAIL"
-        },
-      ],
+    this.deploymentsInfo = [
+      {
+        "Resume": 0,
+        "Catalog": "apicloudhub-uat-va.bankofamerica.com",
+        "ModifiedAt": "2022-11-04T14:55:22.247",
+        "ArtifactName": "api.zip",
+        "FilePublishStatus": "C",
+        "FilePublishError": "",
+        "AIT": 72086,
+        "FileName": "apimanagement2-103.json",
+        "DeploymentID": 25,
+        "MuleOrganizationId": "1D32BEE5-DDC1-4052-8902-1BD6E24A56EB",
+        "MuleEnvironmentName": "UAT",
+        "FileID": 69,
+        "Status": "C",
+        "ModifiedAtStr":  new Date()
+      },
+      {
+        "Resume": 0,
+        "Catalog": "apicloudhub-uat-va.bankofamerica.com",
+        "ModifiedAt": "2022-11-04T14:55:22.247",
+        "ArtifactName": "api.zip",
+        "FilePublishStatus": "C",
+        "FilePublishError": "",
+        "AIT": 72086,
+        "FileName": "apimanagement2-101.json",
+        "DeploymentID": 25,
+        "MuleOrganizationId": "1D32BEE5-DDC1-4052-8902-1BD6E24A56EB",
+        "MuleEnvironmentName": "UAT",
+        "FileID": 70,
+        "Status": "C",
+        "ModifiedAtStr":  new Date()
+      },
+      {
+        "Resume": 0,
+        "Catalog": "apicloudhub-uat-va.bankofamerica.com",
+        "ModifiedAt": "2022-11-04T14:55:22.247",
+        "ArtifactName": "api.zip",
+        "FilePublishStatus": "C",
+        "FilePublishError": "",
+        "AIT": 72086,
+        "FileName": "apimanagement2-102.json",
+        "DeploymentID": 25,
+        "MuleOrganizationId": "1D32BEE5-DDC1-4052-8902-1BD6E24A56EB",
+        "MuleEnvironmentName": "UAT",
+        "FileID": 71,
+        "Status": "C",
+        "ModifiedAtStr": new Date()
+      }
+    ]
+    for(let i = 0; i < this.deploymentsInfo.length; i++) {
+      this.deploymentsInfo[i].ModifiedAtStr = new Date(this.deploymentsInfo[i].ModifiedAt)
     }
-    this.cardFilterContent = this.deploymentInfo?.fileDetails
-    let idVal = this.route.snapshot.paramMap.get('id')
-    if(idVal != null) {
-      this.deploymentInfo.deploymentID = parseInt(idVal)
-    }
+    this.cardFilterContent = this.deploymentsInfo
   }
 
   clearSearch() {
@@ -224,7 +108,7 @@ export class DeploymentComponent implements OnInit {
   }
 
   applyAPIFilter(input : string) {
-    this.cardFilterContent = this.deploymentInfo?.fileDetails.filter(apiData => {
+    this.cardFilterContent = this.deploymentsInfo?.filter(apiData => {
       return apiData.FileName.toLowerCase().includes(this.searchText.toLowerCase());
     });
   }
@@ -265,7 +149,8 @@ export class DeploymentComponent implements OnInit {
     }
   }
 
-  openAPIDetailsDialgue(apiDetails : any) {
+  openAPIDetailsDialgue(apiDetails : Deployment) {
+    this.deploymentInfo = apiDetails
     const dialogRef = this.dialog.open(ApiDetailsComponent,{
       panelClass: 'api-details-class',
       disableClose: true,
@@ -274,6 +159,7 @@ export class DeploymentComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
+      this.deploymentInfo = undefined
     });
   }
 }

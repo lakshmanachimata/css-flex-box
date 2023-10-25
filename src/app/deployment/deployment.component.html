@@ -4,69 +4,54 @@
     <div class="bannerSubHead">List all your apis</div>
   </div>
 
-  <div class="dataContainer">
+  <div class="dataContainer" >
     <div class="dataLeft">
       <div class="deploymentTable">
         <div class="deploymentHead" for="deployment">Deployment Details</div>
         <div class="deployementRow">
           <div class="deployementLeft">Deployment ID</div>
-          <div class="deployementRight">{{deploymentInfo?.deploymentID}}</div>
+          <div class="deployementRight">{{deploymentInfo && deploymentInfo.FileID ? deploymentInfo.FileID : ""}}</div>
         </div>
 
         <div class="deployementRow">
           <div class="deployementLeft">Artifact Name</div>
-          <div class="deployementRight">{{deploymentInfo?.artifactName}}</div>
+          <div class="deployementRight">{{deploymentInfo && deploymentInfo.ArtifactName ? deploymentInfo.ArtifactName : ""}}</div>
         </div>
 
         <div class="deployementRow">
           <div class="deployementLeft">AIT</div>
-          <div class="deployementRight">{{deploymentInfo?.ait}}</div>
+          <div class="deployementRight">{{deploymentInfo && deploymentInfo.AIT ? deploymentInfo.AIT : ""}}</div>
         </div>
 
         <div class="deployementRow">
           <div class="deployementLeft">Catalog</div>
-          <div class="deployementRight">{{deploymentInfo?.catalog}}</div>
+          <div class="deployementRight">{{deploymentInfo && deploymentInfo.Catalog ? deploymentInfo.Catalog : ""}}</div>
         </div>
 
         <div class="deployementRow">
           <div class="deployementLeft">Organization ID</div>
-          <div class="deployementRight">{{deploymentInfo?.organizationId}}</div>
+          <div class="deployementRight">{{deploymentInfo && deploymentInfo.MuleOrganizationId ? deploymentInfo.MuleOrganizationId : ""}}</div>
         </div>
 
         <div class="deployementRow">
           <div class="deployementLeft">Environment Name</div>
-          <div class="deployementRight">{{deploymentInfo?.environmentName}}</div>
+          <div class="deployementRight">{{deploymentInfo && deploymentInfo.MuleEnvironmentName ? deploymentInfo.MuleEnvironmentName : ""}}</div>
         </div>
 
         <div class="deployementRow">
           <div class="deployementLeft">Resume Count</div>
-          <div class="deployementRight">{{deploymentInfo?.resumeCount}}</div>
+          <div class="deployementRight">{{deploymentInfo && deploymentInfo.Resume ? deploymentInfo.Resume : ""}}</div>
         </div>
 
         <div class="deployementRow">
           <div class="deployementLeft">Status</div>
-          <div class="deployementRight">{{deploymentInfo?.status}}</div>
-        </div>
-
-        <div class="deployementRow">
-          <div class="deployementLeft">Initiated By</div>
-          <div class="deployementRight">{{deploymentInfo?.initiatedBy}}</div>
-        </div>
-
-        <div class="deployementRow">
-          <div class="deployementLeft">Initiated Date</div>
-          <div class="deployementRight">{{deploymentInfo?.initiatedDate?.toLocaleDateString('en-IN')}}</div>
-        </div>
-
-        <div class="deployementRow">
-          <div class="deployementLeft">Resumed By</div>
-          <div class="deployementRight">{{deploymentInfo?.resumedBy}}</div>
+          <div class="deployementRight">{{deploymentInfo && deploymentInfo.Status ? deploymentInfo.Status : ""}}</div>
         </div>
 
 
         <div class="deployementRow">
-          <div class="deployementLeft">Resumed Date</div>
-          <div class="deployementRight">{{deploymentInfo?.resumedDate?.toLocaleDateString('en-IN')}}</div>
+          <div class="deployementLeft">Modified Date</div>
+          <div class="deployementRight">{{deploymentInfo && deploymentInfo.ModifiedAtStr ? deploymentInfo.ModifiedAtStr.toLocaleDateString('en-IN') : ""}}</div>
         </div>
 
 
@@ -145,7 +130,7 @@
             <div class="tableContent">
               <img src="../../assets/api_icon.png" />{{ grid.FileID }}
             </div>
-            <div class="tableContent">{{ grid.ModifiedAt.toLocaleDateString('en-IN') }}</div>
+            <div class="tableContent">{{ grid.ModifiedAtStr.toLocaleDateString('en-IN') }}</div>
             <div class="tableContent">{{ grid.Status}}</div>
             <!-- <div class="tableContent">{{ grid.rating }}</div> -->
             <!-- <div class="tableContent rating">
