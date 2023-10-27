@@ -50,7 +50,7 @@ export class DeploymentComponent implements OnInit {
       {
         "Resume": 0,
         "Catalog": "apicloudhub-uat-va.bankofamerica.com",
-        "ModifiedAt": "2022-11-04T14:55:22.247",
+        "ModifiedAt": "2022-11-05T14:55:22.247",
         "ArtifactName": "api.zip",
         "FilePublishStatus": "C",
         "FilePublishError": "",
@@ -82,7 +82,7 @@ export class DeploymentComponent implements OnInit {
       {
         "Resume": 0,
         "Catalog": "apicloudhub-uat-va.bankofamerica.com",
-        "ModifiedAt": "2022-11-04T14:55:22.247",
+        "ModifiedAt": "2022-11-05T14:55:22.247",
         "ArtifactName": "api.zip",
         "FilePublishStatus": "C",
         "FilePublishError": "",
@@ -93,6 +93,38 @@ export class DeploymentComponent implements OnInit {
         "MuleEnvironmentName": "UAT",
         "FileID": 71,
         "Status": "C",
+        "ModifiedAtStr": new Date()
+      },
+      {
+        "Resume": 0,
+        "Catalog": "apicloudhub-uat-va.bankofamerica.com",
+        "ModifiedAt": "2022-11-02T14:55:22.247",
+        "ArtifactName": "api.zip",
+        "FilePublishStatus": "F",
+        "FilePublishError": "Deployment Failed",
+        "AIT": 72086,
+        "FileName": "apimanagement2-104.json",
+        "DeploymentID": 25,
+        "MuleOrganizationId": "1D32BEE5-DDC1-4052-8902-1BD6E24A56EB",
+        "MuleEnvironmentName": "UAT",
+        "FileID": 72,
+        "Status": "F",
+        "ModifiedAtStr": new Date()
+      },
+      {
+        "Resume": 0,
+        "Catalog": "apicloudhub-uat-va.bankofamerica.com",
+        "ModifiedAt": "2022-11-03T14:55:22.247",
+        "ArtifactName": "api.zip",
+        "FilePublishStatus": "F",
+        "FilePublishError": "Network Error",
+        "AIT": 72086,
+        "FileName": "apimanagement2-104.json",
+        "DeploymentID": 25,
+        "MuleOrganizationId": "1D32BEE5-DDC1-4052-8902-1BD6E24A56EB",
+        "MuleEnvironmentName": "UAT",
+        "FileID": 73,
+        "Status": "F",
         "ModifiedAtStr": new Date()
       }
     ]

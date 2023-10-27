@@ -10,29 +10,30 @@ mat-grid-tile {
 
 .banner {
   width: 100%;
-  height: 25vh;
-  background-color: lightgrey;
+  height: 15vh;
+  background-color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
-  background-image: url("../../assets/bg_1.jpg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
+  /* background-image: url("../../assets/bg_1.jpg");
+  background-position: center;  Center the image
+  background-repeat: no-repeat;  Do not repeat the image
+  background-size: cover;*/
+  padding-left: 20px;
   opacity:1;
 }
 
 .bannerHead {
-  font-size: 38px;
+  font-size: 30px;
   font-weight: bold;
-  color: #6b6c6d;
+  color: #dedede;
 }
 
 .bannerSubHead {
   font-size: 20px;
   margin-top: 15px;
-  color: #6b6c6d;
+  color: #dedede;
 }
 
 .dataContainer {
@@ -44,15 +45,15 @@ mat-grid-tile {
 }
 .dataLeft {
   width: 20%;
-  padding: 20px 10px;
-  background-color: #fcfcfc;
+  /* padding: 20px 10px; */
+  background-color: #fff;
 }
 
 .deploymentTable {
   width: 100%;
   border: 1px solid #eee;
   border-radius: 5px;
-  box-shadow: 1px 1px 2px black;
+  /* box-shadow: 1px 1px 2px black; */
 }
 
 .deploymentHead {
@@ -60,7 +61,7 @@ mat-grid-tile {
   font-weight: bold;
   background-color: #eee;
   color: #6b6c6d;
-  padding: 15px 7px;
+  padding: 20px 7px;
   text-align: center;
 }
 
@@ -68,8 +69,8 @@ mat-grid-tile {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 12px 5px;
-  border-top: 1px solid black;
+  padding: 20px 5px;
+  border-top: 1px solid #dedede;
 }
 
 .deployementLeft {
@@ -96,20 +97,22 @@ mat-grid-tile {
 }
 
 .apiType {
-  height: 2.8em;
-  border-radius: 5px 0 0 5px;
+  height: 3em;
+  border-radius: 5px;
   padding: 5px;
-  width: 15%;
+  width: 20%;
+  margin-right: 10px;
   border: none;
   outline: none;
-  background-color: #eee;
+  /* background-color: #eee; */
   font-size: 16px;
-  border-right: 2px solid #aaa;
+  border-right: 2px  2px 3px  grey;
 }
 .apiSearch {
-  height: 2.8em;
+  height: 3em;
   padding: 5px 7px;
-  width: 72%;
+  border-radius: 0px;
+  width: 84%;
   border: none;
   outline: none;
   background-color: #eee;
@@ -118,17 +121,18 @@ mat-grid-tile {
 .searchIcon,
 .closeIcon {
   display: inline-flex;
-  height: 2.8em;
+  height: 3em;
   justify-content: center;
   align-items: center;
   padding: 0 15px;
+  border-radius: 5px 0 0 5px;
   background: #eee;
-  color: black;
+  color: #6B6C6D;
   cursor: pointer;
 }
 .closeIcon {
   border-radius: 0 5px 5px 0;
-  border-right: 2px solid #aaa;
+  /* border-right: 2px solid #aaa; */
 }
 
 .filterIcons {
@@ -224,10 +228,15 @@ mat-grid-tile {
 
 .tableContent {
   width: 25%;
-  padding: 12px 7px;
-  border-bottom: 1px solid #aaa;
+  padding: 20px 7px;
   display: inline-flex;
   align-items: center;
+}
+.success {
+  color: green;
+}
+.failed {
+  color: red;
 }
 
 .tableContent img {

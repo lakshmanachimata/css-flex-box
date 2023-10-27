@@ -1,6 +1,6 @@
 <div class="conatiner">
   <div class="banner">
-    <div class="bannerHead">APIHQ UI</div>
+    <div class="bannerHead">ApiHQ UI</div>
     <div class="bannerSubHead">BULK Deployment Dashboard</div>
   </div>
 
@@ -40,7 +40,7 @@
 
         <div class="deployementRow">
           <div class="deployementLeft">Resume Count</div>
-          <div class="deployementRight">{{deploymentInfo && deploymentInfo.Resume ? deploymentInfo.Resume : ""}}</div>
+          <div class="deployementRight">{{deploymentInfo && deploymentInfo.Resume != undefined ? deploymentInfo.Resume : ""}}</div>
         </div>
 
         <div class="deployementRow">
@@ -72,11 +72,11 @@
         <div class="assets">Assets</div>
 
         <div class="searchContainer">
-          <select class="apiType" name="status">
+          <!-- <select class="apiType" name="status">
             <option [value]="0">All types</option>
             <option [value]="1">Active</option>
             <option [value]="2">In Active</option>
-          </select>
+          </select> -->
           <span class="searchIcon"
             ><i class="fa-solid fa-magnifying-glass"></i
           ></span>
@@ -131,7 +131,8 @@
               <img src="../../assets/api_icon.png" />{{ grid.FileID }}
             </div>
             <div class="tableContent">{{ grid.ModifiedAtStr.toLocaleDateString('en-IN') }}</div>
-            <div class="tableContent">{{ grid.Status}}</div>
+            <div class="tableContent success" *ngIf="grid.FilePublishStatus == 'C'">{{ grid.FilePublishStatus}}</div>
+            <div class="tableContent failed" *ngIf="grid.FilePublishStatus == 'F'">{{ grid.FilePublishStatus}}</div>
             <!-- <div class="tableContent">{{ grid.rating }}</div> -->
             <!-- <div class="tableContent rating">
               <span *ngIf="grid.Status >= 1"><i class="fa-solid fa-star"></i></span>

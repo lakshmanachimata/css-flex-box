@@ -32,13 +32,13 @@
 
       <div class="deployementRow">
         <div class="deployementLeft">Deployment Status</div>
-        <div class="deployementRightSuccess" *ngIf="apiDetailsData.FilePublishStatus == 'Success'">{{ apiDetailsData.FilePublishStatus }}</div>
-        <div class="deployementRightFailed" *ngIf="apiDetailsData.FilePublishStatus == 'Failed'">{{ apiDetailsData.FilePublishStatus }}</div>
+        <div class="deployementRightSuccess" *ngIf="apiDetailsData.FilePublishStatus == 'C'">{{ apiDetailsData.FilePublishStatus }}</div>
+        <div class="deployementRightFailed" *ngIf="apiDetailsData.FilePublishStatus != 'C'">{{ apiDetailsData.FilePublishStatus }}</div>
       </div>
       <div class="deployementRow">
         <div class="deployementLeft">Deployment Errors</div>
-        <div class="deployementRightSuccess" *ngIf="apiDetailsData.FilePublishStatus == 'Success'">{{ apiDetailsData.FilePublishError }}</div>
-        <div class="deployementRightFailed" *ngIf="apiDetailsData.FilePublishStatus == 'Failed'">{{ apiDetailsData.FilePublishError }}</div>
+        <div class="deployementRightSuccess" *ngIf="apiDetailsData.FilePublishStatus == 'C'">{{ apiDetailsData.FilePublishError }}</div>
+        <div class="deployementRightFailed" *ngIf="apiDetailsData.FilePublishStatus != 'C'">{{ apiDetailsData.FilePublishError }}</div>
       </div>
       <div class="deployementRow" *ngIf="apiDetailsData.Status == 'C'">
         <div class="deployementLeft">Link to Asset</div>
