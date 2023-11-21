@@ -1,0 +1,41 @@
+1. Open the deployment details page
+
+Precondition: User should be authenticated and should see list of deployments.
+Actions: Fetch deployment details
+Expected Result: Asset list of the deployment should be displayed
+
+2. In the deployment details page, validate the deployment information
+
+Precondition: user should be in the deployment details page
+Actions: Check if all the deployment information is valid and correct
+Expected Result: All the information related to deployment should be correct
+
+3. In the deployment details page, asset list of the deployment should be displayed
+
+Precondition: user should be in the deployment details page
+Actions: Check if all the assets related to the deployment is displayed as a list with deployment time & status
+Expected Result: All the information related to assets should be correct and asset list should have File ID, File Name, deployment time & status
+
+4. Click on File ID to view details related to File in a popup
+
+Precondition: user should be in the deployment details page
+Actions: Click on File ID
+Expected Result: details realted to the File ID should be displayed to the user in the popup
+
+5. Validate the details displayed in the popup
+
+Precondition: user should be in the File ID details Popup
+Actions: validate the fields displayed in the popup
+Expected Result: All the expected fields - File ID, File Name, Catalog Name, AIT, Organization Name, Deployment Status, Deployment Errors, Link to Asset should be displayed
+
+6. Validate the JSON details against the field Link to Asset
+
+Precondition: user should be in the File ID details Popup
+Actions: Click on the 'View File Info' link against the Link to Asset in the Popup
+Expected Result: Complete JSON details should be displayed against the link to asset.
+
+7. Download the JSON details against the field Link to Asset
+
+Precondition: user should be in the File ID details Popup
+Actions: Click on the 'Download File Info' link against the Link to Asset in the Popup
+Expected Result: Complete JSON details should be downloaded.
