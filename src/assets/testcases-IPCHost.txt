@@ -1,0 +1,90 @@
+1. Start IPCHost Application
+
+Precondition: IPCHost application setup should be ready
+Actions: Start IPCHost Application
+Expected Result: IPCHost Application should start without any errors
+
+2. On Start, IPCHost application should load application Configuration
+
+Precondition: IPCHost application should be started
+Actions: Start IPCHost Application
+Expected Result: IPCHost application should load application Configuration
+
+3. To Verify if IPC Host application configuration is as per spec
+
+Precondition: IPCHost application should be started
+Actions: Start IPCHost Application
+Expected Result: IPC Host application configuration should be as per spec
+
+4. Application configuration JSON should not be modified during the execution
+
+Precondition: IPCHost application should be started
+Actions: Start IPCHost Application
+Expected Result: Application configuration JSON should not be modified during the execution
+
+5. Verify if application ids, events & contexts are having any duplicates in the respective json's.
+
+Precondition: IPCHost application should be started
+Actions: Start IPCHost Application
+Expected Result: application ids, events & contexts should not have any duplicates
+
+6. create provider with AppID & ait that is present in the application.json
+
+Precondition: IPCHost application should be started
+Actions: Start IPCHost Application
+Expected Result: Provider should be created successfully.
+
+7. create provider with AppID & ait that is not present in the application.json
+
+Precondition: IPCHost application should be started
+Actions: Start IPCHost Application
+Expected Result: Error should be displayed in the logs, stating not valid AppId
+
+8. Verify if socket connection is eastablished after creating the provider with valid appId & ait
+
+Precondition: IPCHost application should be started
+Actions: create provider with AppID & ait that is present in the application.json
+Expected Result: Socket should be eastablished
+
+9. verify if all valid providers are getting notified when event is created against the provider
+
+Precondition: provider with AppID & ait that is present in the application.json should be in place
+Actions: create an event from tester app
+Expected Result: all valid providers are getting notified when event is created against the provider
+
+10. verify if all invalid providers are not getting notified when event is created against the provider
+
+Precondition: provider with AppID & ait that is present in the application.json should be in place
+Actions: create an event from tester app
+Expected Result: all invalid providers should not get notified when event is created against the provider
+
+11. verify if all valid providers are getting notified when context is set against the provider
+
+Precondition: provider with AppID & ait that is present in the application.json should be in place
+Actions: set context against member of app from tester app
+Expected Result: all valid providers are getting notified when context is set against the provider
+
+12. verify if all invalid providers are not getting notified when context is created against the provider
+
+Precondition: provider with AppID & ait that is present in the application.json should be in place
+Actions: set context against member of app from tester app
+Expected Result: all Invalid providers should not get notified when context is set against the provider
+
+11. verify if all valid providers are able to fetch context
+
+Precondition: context should be set already
+Actions: get context against member of app from tester app
+Expected Result: should be able to get context
+
+12. verify if all invalid providers are not able to fetch context
+
+Precondition: context should be set already
+Actions: get context against member of app from tester app
+Expected Result: should not be able to get context
+
+13. Verify if IPCHost is shutdown without any issues
+
+Precondition: IPCHost application should be started
+Actions: shutdown IPCHost application
+Expected Result: IPCHost is shutdown, see the message - IPCHost is exiting, without any issues.
+
